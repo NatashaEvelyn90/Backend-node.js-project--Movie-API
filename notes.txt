@@ -9,7 +9,7 @@ These will lock the pages that people do not need to touch if you have to hand i
 Next, you would need to  make sure you open your terminal (gitbash or VScode) and type in:
     - npm init -y
 Typing that code in the terminal will install basically express? Node.js? I can't remember but it is installing what you would need to be able to create your webpage.
-After doing so, make sure you run the packages you need to install. In this one, we will be installing AXIOS, EXPRESS and EJS. There is a third one but we will not be installing them this time. Check your Microsoft OneNote for the list of packages you can install for future use.
+After doing so, make sure you run the packages you need to install. In this one, we will be installing AXIOS, EXPRESS and EJS. There is a fourth one but we will not be installing them this time. Check your Microsoft OneNote for the list of packages you can install for future use.
 
 To install the packages, you would type:
 npm install axios
@@ -17,7 +17,7 @@ npm i ejs
 npm i express
 * I wrote it two ways and both ways would work for installation. Choose whichever works best for you!
 
-Next, make sure you add a file called app.js or server.js. Whichever you perfer to use as that would be your main file where you will list your website PORT and such. 
+Next, make sure you add a file called app.js or server.js. Whichever you perfer to use as that would be your main file where you will list your website PORT and such. (In this one, I will be using app.js!)
 
 After installing the packages, it is best to go into your package.json file that was created the moment you ran the npm init -y command. Within that file, there are a few things that you want to check are correct and a few things you will have to add. 
     -First, in the first section, there should be 4 categories: "Name, version, description and main". The section you want to update is the main. It might have something else added in there. make sure you change it to the file you created. (app.js or server.js)
@@ -27,22 +27,22 @@ After installing the packages, it is best to go into your package.json file that
     -Continue down and in the third secton, you will have keywords, author, license, type, bugs and url. (if you don't have some of them listed, that is okay as well because I created a folder via gitHub first and then it created everything else.) In the AUTHOR section, go ahead and add your name within the quotes. You can use your actual name or an author name or so forth. You can also leave it blank. 
     -Lastly, there is extra stuff at the bottom that states homepage, dependencies, and then under dependencies, it should list everything that is installed. SO for this project, you should have axios, ejs and express already installed.  
 
-**  **      **    
+**  **  **    
 LETS BUILD THE WEBSITE!!!
 
 First, go to your app.js/server.js and type as follows: 
- 
     -const express = require('express')
     -const app = express()
 
-const router = require('./routes/router')
-const PORT = process.env.PORT || 4200
+    -const router = require('./routes/router')
+    -const PORT = process.env.PORT || 4200
 
+    -app.use('/', router) 
+    -app.set('view engine', 'ejs')
 
-app.use('/', router) 
-app.set('view engine', 'ejs')
+    -app.listen(PORT, () => console.log(`Server is listening at http://localhost:${PORT}`))
 
-app.listen(PORT, () => console.log(`Server is listening at http://localhost:${PORT}`))
+If you are using a server.js file, make sure where I have listed the word "app" you put the word "server" instead. 
 
 
 
