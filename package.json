@@ -1,0 +1,28 @@
+{
+  "name": "backend-node.js-project--movie-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NatashaEvelyn90/Backend-node.js-project--Movie-API.git"
+  },
+  "keywords": [],
+  "author": "crazpicc",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/NatashaEvelyn90/Backend-node.js-project--Movie-API/issues"
+  },
+  "homepage": "https://github.com/NatashaEvelyn90/Backend-node.js-project--Movie-API#readme",
+  "dependencies": {
+    "axios": "^1.13.1",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  }
+}
