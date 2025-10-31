@@ -1,0 +1,25 @@
+<%- include('../partials/header') %>
+
+<main class="main" id="main">
+    <div class="container">
+        <div class="row">
+        </div>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <% data.forEach(movie => { %>
+                <div class="card" style="width: 18rem;">
+                    <img src="<%= movie.posterURL %>" class="card-img-top" alt="movie image of <%= movie.id.title %>">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= movie.title %></h5>
+                                <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos nobis unde ea amet fugiat quasi ipsam suscipit! Voluptate, maxime, cumque facilis eveniet nam nemo inventore, vel facere dolor enim dolorem?</p>                                   
+                                <p><%= movie.imdbId %></p>
+                        </div>
+                </div>
+            <% }) %>
+
+        </div>
+    </div>
+</main>
+
+
+
+<%- include('../partials/footer') %>

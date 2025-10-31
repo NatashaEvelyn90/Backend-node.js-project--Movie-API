@@ -32,14 +32,24 @@ LETS BUILD THE WEBSITE!!!
 
 First, go to your app.js/server.js and type as follows: 
  
-const express = require('express')
-const server = express()
+    -const express = require('express')
+    -const app = express()
 
 const router = require('./routes/router')
 const PORT = process.env.PORT || 4200
 
 
-server.use('/', router) 
-server.set('view engine', 'ejs')
+app.use('/', router) 
+app.set('view engine', 'ejs')
 
-server.listen(PORT, () => console.log(`Server is listening at http://localhost:${PORT}`))
+app.listen(PORT, () => console.log(`Server is listening at http://localhost:${PORT}`))
+
+
+
+
+
+
+
+
+
+**If you are looking back at your notes and you look at the jokesRoutes.js and the router.js and you see the http://localhost:3001/jokes and then see http://localhost:3001, they are both basically a homepage. HOWEVER, the one that is the /jokes shows ALL the jokes vs the 3001 only shows the homepage hub (with a joke on the homepage). But honestly, you really don't need the /jokes one and just keep your homepage and continue on making all the other pages. 

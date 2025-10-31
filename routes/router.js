@@ -1,12 +1,19 @@
-//! Everything you will be doing will mainly be in this page.
 const express = require('express')
 const router = express.Router()
-// const axios = require('axios')
+const axios = require('axios')
 const PORT = process.env.PORT || 4200
 
-// http://localhost:4200/movie
+
+//! This is your main homepage right here 
+//? http://localhost:4200
 router.get('/', (req, res)=> {
-    res.send('Movies coming your way!')
+    res.render('pages/home', {
+                //* the title is going to show in your header.ejs + home.ejs.  You are using EJS for this! Name is showing in home.ejs
+                title: "MovieZ Galore",
+                name: "Crazpicc's movie gallery",
+            })
 })
+
+router.use('/', require('./api/movieRoutes'))
 
 module.exports = router

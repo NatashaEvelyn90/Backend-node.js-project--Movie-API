@@ -1,14 +1,11 @@
-//TODO Step 1: Import Express and create the port 
 const express = require('express')
-const server = express()
-//! importing the router file 
+const app = express()
+
 const router = require('./routes/router')
 const PORT = process.env.PORT || 4200
 
 
-server.use('/', router)
-//! This here is what we are using as the view engine. It is ejs 
-server.set('view engine', 'ejs')
+app.use('/', router)
+app.set('view engine', 'ejs')
 
-//TODO Step 2: listen to see if the port is working
-server.listen(PORT, () => console.log(`Server is listening at http://localhost:${PORT}`))
+app.listen(PORT, () => console.log(`Server is ready at http://localhost:${PORT}`))
