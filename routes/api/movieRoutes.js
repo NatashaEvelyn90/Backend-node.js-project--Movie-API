@@ -2,6 +2,7 @@
 const express = require('express')
 const router = express.Router()
 const axios = require('axios')
+const { paginationResults} = require('../../helpers/pagination')
 const PORT = process.env.PORT || 4200
 
 //! ANIMATION MOVIES 
@@ -129,6 +130,7 @@ router.get('/western', (req, res) => {
             })
         })
 })
+
 
 
 module.exports = router
